@@ -5,6 +5,7 @@ nav_order: 1
 ---
 
 These pages contain the technical documentation of the Dramco IoT with a Soft Touch (IWAST) project.
+It focuses on simplicity to integrate sensors for educational purposes.
 
 
 An application, running locally on a computer, is used to configure the mother board. More specifically, the mother board notifies the client application of the connected sensors. Based on the configuration file of each sensor --hosted online-- the client application allows to configure the update frequency of each sensor and corresponding parameters. 
