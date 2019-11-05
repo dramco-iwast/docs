@@ -1,0 +1,82 @@
+<p>The functionalities and possible configurations for each sensor is defined in the <a href="https://github.com/dramco-iwast/sensor-description-files">descrption files</a>.</p>
+
+<p>It is structured as:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Sensor</span><span class="nv"> </span><span class="s">name"</span>
+
+<span class="c1"># How to parse the raw byte payload coming from TTN</span>
+<span class="na">parse-payload</span><span class="pi">:</span> <span class="kt">!!js/function</span> <span class="pi">&gt;</span>
+            <span class="s">function f(value) {</span>
+            <span class="s">error("Not Implemented yet")</span>
+            <span class="s">}();</span>
+
+<span class="c1"># Information regarding the sensor board (Dutch and English)</span>
+<span class="na">info</span><span class="pi">:</span>
+  <span class="na">nl</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">Deze sensor bevat vier verschillende functionaliteiten.</span>
+    <span class="s">Het kan de temperatuur, druk, Luchtkwaliteit en vochtigheid opmeten.</span>
+  <span class="na">en</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">This sensor has four functionalities.</span>
+    <span class="s">It can measure the temperature, air quality, pressure en humidity.</span>
+
+<span class="c1"># Each sensor has at least one metric which can be measured</span>
+<span class="c1"># For each metric we define the following:</span>
+
+<span class="na">sensor-metric</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">unit</span><span class="pi">:</span> <span class="s2">"</span><span class="s">°C"</span>
+    <span class="na">quantity</span><span class="pi">:</span>
+      <span class="na">nl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Temperatuur"</span>
+      <span class="na">en</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Temperature"</span>
+    <span class="na">info</span><span class="pi">:</span>
+      <span class="na">nl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Meet</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">temperatuur</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">°C."</span>
+      <span class="na">en</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Measure</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">temperature</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">°C."</span>
+    <span class="na">size</span><span class="pi">:</span> <span class="m">2</span>  <span class="c1"># in bytes</span>
+    <span class="c1"># machine interpretation of the raw byte payload</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">uint16"</span>
+    <span class="c1"># number of decimals after comma</span>
+    <span class="na">precision</span><span class="pi">:</span> <span class="s">2</span>  
+    <span class="c1"># two functions converting the data between machine and human readible values</span>
+    <span class="c1"># For instance: 15.2°C (human) can be converted to 15.2*100=152 in order to have one digit after comma</span>
+    <span class="na">convert-to-machine</span><span class="pi">:</span> <span class="kt">!!js/function</span> <span class="pi">&gt;</span>
+            <span class="s">function f(value) {}</span>
+            <span class="s">return value + 273.15 ;</span>
+            <span class="s">}();</span>
+    <span class="na">convert-to-human</span><span class="pi">:</span> <span class="kt">!!js/function</span> <span class="pi">&gt;</span>
+            <span class="s">function f(value) {</span>
+            <span class="s">return value - 273.15;</span>
+            <span class="s">}();</span>
+    <span class="c1"># metric specific configuration</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">threshold</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">threshold-max</span><span class="pi">:</span> <span class="m">58</span>
+        <span class="na">threshold-min</span><span class="pi">:</span> <span class="s">-40</span>
+        <span class="na">minumum-polling-interval</span><span class="pi">:</span> <span class="m">10</span>  <span class="c1"># in seconds</span>
+  <span class="pi">-</span> <span class="na">unit</span><span class="pi">:</span> <span class="s2">"</span><span class="s">-"</span>
+    <span class="na">quantity</span><span class="pi">:</span>
+      <span class="na">en</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Air</span><span class="nv"> </span><span class="s">Quality</span><span class="nv"> </span><span class="s">Indication"</span>
+      <span class="na">nl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Luchtkwaliteitsindicatie"</span>
+    <span class="na">info</span><span class="pi">:</span>
+      <span class="na">nl</span><span class="pi">:</span> <span class="pi">|-</span>
+          <span class="s">Meet hoe vervuild de lucht rondom de module is.</span>
+          <span class="s">Kijk of er een risico is voor de gezondheid.</span>
+      <span class="na">en</span><span class="pi">:</span> <span class="pi">|-</span>
+          <span class="s">Measure how polluted the air is.</span>
+          <span class="s">Evaluate if there are any health risks possible.</span>
+    <span class="na">size</span><span class="pi">:</span> <span class="m">2</span>  <span class="c1"># in bytes</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">uint16"</span>
+    <span class="na">precision</span><span class="pi">:</span> <span class="m">0</span>  <span class="c1"># number of decimals after comma</span>
+    <span class="na">convert-to-machine</span><span class="pi">:</span> <span class="kt">!!js/function</span> <span class="pi">&gt;</span> <span class="c1">#  no convertion needed</span>
+          <span class="s">function f(value) {}</span>
+          <span class="s">return value;</span>
+          <span class="s">}();</span>
+    <span class="na">convert-to-human</span><span class="pi">:</span> <span class="kt">!!js/function</span> <span class="pi">&gt;</span> <span class="c1">#  no convertion needed</span>
+          <span class="s">function f(value) {</span>
+          <span class="s">return value;</span>
+          <span class="s">}();</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">threshold</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">threshold-max</span><span class="pi">:</span> <span class="m">500</span>
+        <span class="na">threshold-min</span><span class="pi">:</span> <span class="m">0</span>
+        <span class="na">minumum-polling-interval</span><span class="pi">:</span> <span class="m">10</span>  <span class="c1"># in seconds</span>
+</code></pre></div></div>
+
