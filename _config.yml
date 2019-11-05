@@ -10,3 +10,4 @@ search_tokenizer_separator: /[\s/]+/
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
+markdown: kramdown
