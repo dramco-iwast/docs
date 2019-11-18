@@ -36,5 +36,5 @@ The 12 bit ADC of the PIC16F18446 samples the analog signal to 16-bit values wit
 
 The microphone module communicates with the motherboard via I2C-commands to set the threshold value or timing interval.
 
-## [Schematics](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/degoes-consulting/lambdaconf-2015/master/speakers/jdegoes/intro-purescript/presentation.pdf
-)
+## <a href="https://github.com/dramco-iwast/sensors/tree/master/hardware/sound_level/schematics" target="_blank">Schematics</a>
+
