@@ -24,6 +24,7 @@ This will also halt the serial communication, as the motherboard does not proces
 | parity       | none   |
 | stop bits    | 1      |
 | flow control | off    |
+|-----------|--------|-------------|
 
 
 
@@ -37,15 +38,18 @@ This will also halt the serial communication, as the motherboard does not proces
 | `<sensor-type>` | 2 hex digits | Last 2 hex digits in the sensor id. IDs are defined in [sensors.yaml](https://github.com/dramco-iwast/sensor-description-files/blob/master/sensors.yaml) |
 | `<metric-id>` | 2 hex digits |TODO |
 | `<motherboard-id>` | 4 hex digits |TODO |
+|-----------|--------|-------------|
 
 
 ## Error Codes
 | Parameter | Format | Description |
+|-----------|--------|-------------|
 AT_UNDEFINED_ERROR | 0 | We could not identify the error, but there is one... |
 AT_INVALID_ID | 1 | The specified identifier (address, type or id) is not valid |
 AT_INVALID_POL | 2 | The polling interval does not comply with the specs |
 AT_WRONG_VALUE | 3 | The supplied value is not supported, e.g. when enabling something only 0 and 1 are allowed |
 AT_WRONG_COMMAND | 4 | The supplied AT command is not recognized |
+|-----------|--------|-------------|
 
 
 
