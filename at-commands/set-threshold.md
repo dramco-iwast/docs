@@ -38,8 +38,8 @@ Set the threshold for the sensor with ID `<sensor-address>`. The `<sensor-addres
 
 ### Example
 ```
-Command>  AT+TH=01 01
+Command>  AT+TH=F1 01 01
 Response> OK
 ```
-Disable the threshold for metric `0x01` of sensor `0x01`. 
+Disable the threshold for metric `0xF1` of sensor `0x01`. 
 
