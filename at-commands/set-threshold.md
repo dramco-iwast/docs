@@ -11,17 +11,17 @@ nav_order: 5
 ### Commands
 
 
-### Enabling
+#### Enabling
 ```
 AT+TE=<sensor-address> <metric> <thresholds-enabled> 
 ```
 
-### Threshold Low
+#### Threshold Low
 
 ```
 AT+TLL=<sensor-address> <metric> <threshold-level-low>
 ```
-### Threshold High
+#### Threshold High
 
 ```
 AT+TLH=<sensor-address> <metric> <threshold-level-high>
