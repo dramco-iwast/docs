@@ -17,6 +17,16 @@ All AT commands changing the configuration of the sensors, will be stored in non
 To push these configurations to sensors, the `close` command needs to be executed.
 This will also halt the serial communication, as the motherboard does not process any incoming data.
 
+| Parameter    | Format |
+| ------------ | ------ |
+| Baudrate     | 115200 |
+| data bits    | 8      |
+| parity       | none   |
+| stop bits    | 1      |
+| flow control | off    |
+
+
+
 
 ## Data Format and Identifiers
 
