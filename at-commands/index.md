@@ -19,5 +19,8 @@ This will also halt the serial communication, as the motherboard does not proces
 
 
 ## Data Format and Identifiers
-Sensor id, sensor type and motherboard id -> hex string with fixed size
-Poll interval, threshold levels and metric specifiers all decimals (ascii string).
+| Parameter | Format | Description |
+|-----------|--------|-------------|
+| Sensor ID | 2 hex digit | |
+| metric ID | 2 hex digit | |
+

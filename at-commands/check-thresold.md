@@ -19,11 +19,11 @@ AT+TH?<sensor-id> <metric>
 ```
 
 ### Description
-Check the threshold settings for the sensor with ID <sensor-id> (opnieuw: waar leggen we thresholds uit?). The <sensor-id> field is a 2-digit hex string. The <thresholds-enabled> field will be either ‘0’ (not enabled) or ‘1’ (enabled). Both <threshold-level-low> and <threshold-level-high> are decimal strings (between 0 and 65535).  When an invalid sensor ID is specified, only +TH: is returned.
+Checks the threshold settings for the sensor with ID `<sensor-id>`. The `<sensor-id>` field is a 2-digit hex string. The `<thresholds-enabled>` field will be either ‘0’ (not enabled) or ‘1’ (enabled). Both `<threshold-level-low>` and `<threshold-level-high>` are decimal strings (between 0 and 65535).  When an invalid sensor ID is specified, only +TH: is returned.
 
 ### Example
 ```
-Command>  AT+TH?=02 1
+Command> AT+TH?=02 1
 Response> +TH: 1 100 5000
 ```
 

@@ -14,7 +14,7 @@ AT+CLS
 
 ### Response
 ```
-OK | ERROR
+OK | ERROR <error-code>
 ```
 
 ### Description
@@ -24,7 +24,7 @@ It will push the updated configurations to all connected sensors.
 
 ### Example
 ```
-Command>  AT+CLS
+Command> AT+CLS
 Response> OK
-No errors occured.
+No errors occurred.
 ```

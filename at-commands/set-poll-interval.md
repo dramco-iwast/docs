@@ -15,11 +15,11 @@ AT+POL=<sensor-id> <metric> <poll-interval>
 
 ### Response
 ```
-OK | ERROR
+OK | ERROR <code>
 ```
 
 ### Description
-Set the poll interval for the sensor with ID `<sensor-id>`. The `<sensor-id>` field is a 2-digit hex string. The `<poll-interval>` formatted as a decimal string. When the poll interval is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR`.
+Set the poll interval for the sensor with ID `<sensor-id>`. The `<sensor-id>` field and the `<metric>` are each a 2-digit hex string. The `<poll-interval>` formatted as a decimal string. When the poll interval is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR` followed by an error code.
 
 > Bedenkingen geof (maar moet dat hier)?
 >•	Minimum poll interval: 5 minutes? (Not enforced yet in software).
@@ -28,8 +28,8 @@ Set the poll interval for the sensor with ID `<sensor-id>`. The `<sensor-id>` fi
 
 ### Example
 ```
-Command>  AT+POL=01 1 600
+Command>  AT+POL=01 01 600
 Response> OK
 ```
-Set poll interval for sensor 0x01, metric 1 to 600 seconds, i.e., every 10 minutes.
+Set poll interval for sensor 0x01, metric 0x01 to 600 seconds, i.e., every 10 minutes.
 

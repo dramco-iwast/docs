@@ -23,7 +23,7 @@ Ping the motherboard. The motherboard will respond with its motherboard ID This 
 
 ### Example
 ```
-Command>  AT+PNG?
+Command> AT+PNG?
 Response> +PNG: 474F
 The board has id 0x474F
 ```
