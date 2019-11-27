@@ -10,7 +10,7 @@ nav_order: 4
 
 ### Command
 ```
-AT+TH?<sensor-id> <metric>
+AT+TH?<sensor-address> <metric>
 ```
 
 ### Response
@@ -19,7 +19,7 @@ AT+TH?<sensor-id> <metric>
 ```
 
 ### Description
-Checks the threshold settings for the sensor with ID `<sensor-id>`. The `<sensor-id>` field is a 2-digit hex string. The `<thresholds-enabled>` field will be either ‘0’ (not enabled) or ‘1’ (enabled). Both `<threshold-level-low>` and `<threshold-level-high>` are decimal strings (between 0 and 65535).  When an invalid sensor ID is specified, only +TH: is returned.
+Checks the threshold settings for the sensor with address `<sensor-address>`. The `<thresholds-enabled>` field will be either ‘0’ (not enabled) or ‘1’ (enabled). Both `<threshold-level-low>` and `<threshold-level-high>` are decimal strings (between 0 and 65535).  When an invalid sensor ID is specified, only +TH: is returned.
 
 ### Example
 ```

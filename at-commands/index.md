@@ -19,8 +19,14 @@ This will also halt the serial communication, as the motherboard does not proces
 
 
 ## Data Format and Identifiers
+
 | Parameter | Format | Description |
 |-----------|--------|-------------|
-| Sensor ID | 2 hex digit | |
-| metric ID | 2 hex digit | |
+| `<sensor-id>` | 4 hex digits | The Sensor ID comprises the Sensor Address (given by the motherboard) and the Sensor Type |
+| `<sensor-address>` | 2 hex digits | First 2 hex digits in the sensor id. |
+| `<sensor-type>` | 2 hex digits | Last 2 hex digits in the sensor id. IDs are defined in [sensors.yaml](https://github.com/dramco-iwast/sensor-description-files/blob/master/sensors.yaml) |
+| `<metric-id>` | 2 hex digits |TODO |
+| `<motherboard-id>` | 4 hex digits |TODO |
+
+
 

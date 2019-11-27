@@ -10,7 +10,7 @@ nav_order: 3
 
 ### Command
 ```
-AT+POL?<sensor-id> <metric>
+AT+POL?<sensor-address> <metric>
 ```
 
 ### Response

@@ -10,7 +10,7 @@ nav_order: 5
 
 ### Command
 ```
-AT+TH=<sensor-id> <metric> <enable>
+AT+TH=<sensor-address> <metric> <enable>
 ```
 
 ### Response
@@ -19,7 +19,7 @@ OK | ERROR <code>
 ```
 
 ### Description
-Set the threshold for the sensor with ID `<sensor-id>`. The `<sensor-id>` field and the `<metric>` are each a 2-digit hex string. The `<threshold>` is `0` when disabled and `1` when enabled. When the threshold is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR` followed by an error code.
+Set the threshold for the sensor with ID `<sensor-address>`. The `<sensor-address>` field and the `<metric>` are each a 2-digit hex string. The `<threshold>` is `0` when disabled and `1` when enabled. When the threshold is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR` followed by an error code.
 
 ### Example
 ```

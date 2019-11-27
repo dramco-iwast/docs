@@ -10,7 +10,7 @@ nav_order: 5
 
 ### Command
 ```
-AT+POL=<sensor-id> <metric> <poll-interval>
+AT+POL=<sensor-address> <metric> <poll-interval>
 ```
 
 ### Response
@@ -19,7 +19,7 @@ OK | ERROR <code>
 ```
 
 ### Description
-Set the poll interval for the sensor with ID `<sensor-id>`. The `<sensor-id>` field and the `<metric>` are each a 2-digit hex string. The `<poll-interval>` formatted as a decimal string. When the poll interval is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR` followed by an error code.
+Set the poll interval for the sensor with ID `<sensor-address>`. The `<sensor-address>` field and the `<metric-id>` are each a 2-digit hex string. The `<poll-interval>` formatted as a decimal string. When the poll interval is changed successfully, the motherboard responds with `OK`. Otherwise, e.g., when an invalid sensor ID is specified, the response is `ERROR` followed by an error code.
 
 > Bedenkingen geof (maar moet dat hier)?
 >•	Minimum poll interval: 5 minutes? (Not enforced yet in software).
