@@ -11,3 +11,9 @@ search_tokenizer_separator: /[\s/]+/
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
 markdown: kramdown
+
+
+# Aux links for the upper right navigation
+aux_links:
+  "Edit this page on GitHub":
+    - {{site.github.repository_url}}/blob/gh-pages/{{page.path}}
