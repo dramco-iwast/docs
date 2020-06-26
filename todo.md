@@ -4,7 +4,7 @@ List of things that need to be looked into, organized on topic.
 ## Motherboard
 * work with single poll interval for sensors with multiple metrics. This requires modification of the configurator tool as well.
 * Remove Diodes 4 and 5 and use another circuit for multiple supply voltages instead (Comparator and mosfet)
-* Use a higher grade LDO to have a smaller transient when switching on the motherboard
+* Use a higher grade LDO to have a smaller transient when switching on the motherboard (lp5907qmfx-3.3q1 seems to solve the problem, it does have the same footprint as well)
 * Think about the concept of letting the motherboard control the time and sequence of measurements. Remove the WDT to wake the sensors periodically but use an motherboard int instead
 
 ## BME680
