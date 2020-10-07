@@ -3,7 +3,7 @@ layout: default
 title: Check poll interval
 parent: AT Commands
 has_toc: true
-nav_order: 3
+nav_order: 6
 ---
 
 ## Check poll interval
