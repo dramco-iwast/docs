@@ -6,7 +6,7 @@ has_toc: true
 nav_order: 3
 ---
 
-## Set Data Accumulation (get motherboard ID)
+## Set Data Accumulation
 ### Command
 ```
 AT+ACC=<0|1>
