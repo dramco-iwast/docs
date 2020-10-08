@@ -24,8 +24,13 @@ List of things that need to be looked into, organized on topic.
 ## Configurator
 * todo's for the configurator tool
 * Make it possible to program the motherboard for a second time without the need of restarting the tool
+* check .exe release
 * Add extra functionality concerning the battery module
+* Disable polling for buttons
+* Incorporate data accumulation
 
 ## Web application
+* Incorporate data accumulation
+* Periodic status updates?
 * Add extra functionality concerning the battery module
 * if more than x-time, no data is received in the databank, make the graph 0 for that time to make sure that when the measurements start again, no intersection line is drawn between the 2 points.
