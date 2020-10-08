@@ -1,4 +1,10 @@
-## Power module
+---
+title: Power module
+parent: Sensor Boards
+has_toc: true
+nav_order: 5
+layout: default
+---
 
 The power module is designed to make the system last longer by adding a battery combined with a solar panel to the system. The system can therefore be powered off the grid and without a power bank. The power module can also measure the incident light by means of a light dependent resistor to get an idea of how well the solar panel is performing. If ever the battery gets drained, there is still a possibility to charge the battery by the micro USB port.
 
