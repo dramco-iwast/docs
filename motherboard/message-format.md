@@ -8,10 +8,11 @@ layout: default
 
 LoRaWAN message format used by the motherboard
 
-|-:|:-:|:-:|
-|__Index__ |      [0]     |     [1-47]      |
-|__Size__  |       1      |   3 up to 47    |
-|__Value__ | message type | message payload |
+| Field | Size | Index | Description |
+|-----------|--------|-------------|
+| `<message-type>` | 1 byte | 0 | The Message Type field indicates what type of message has been sent. |
+| `<message-payload>` | 3 up to 47 bytes | 1 up to 47 | The payload format depends on the Message Type.|
+|-----------|--------|-------------|
 
 ## Supported message types:
 1. Status message: message type 'S'
@@ -20,7 +21,8 @@ LoRaWAN message format used by the motherboard
 
 ## Status message format
 
-|-:|:-:|:-:|
-|__Index__ |  [0] | [1-2]  | [3] | [4] | [5-8] |
-|__Size__  |  1   |   2    | 1   | 1   | 4     |
-|__Value__ | 'S'  | motherboard id | data accumulation enabled | nr of sensors | local epoch |
+| Field | Size | Index | Description / Value|
+|-----------|--------|-------------|
+| `<message-type>` | 1 byte | 0 | 'S' (0x53) for a status message |
+| `<motherboard-id>` | 2 bytes | 1-2 | The 16-bit Motherboard ID.|
+|-----------|--------|-------------|
