@@ -8,11 +8,13 @@ layout: default
 
 LoRaWAN message format used by the motherboard
 
-| Index |      [0]     |     [1-47]      |
-|-------|--------------|-----------------|
-| Size  |       1      |   3 up to 47    |
-|-------|--------------|-----------------|
-| Value | message type | message payload |
+| | | |
+|-|-|-|
+|__Index__ |      [0]     |     [1-47]      |
+|----------|--------------|-----------------|
+|__Size__  |       1      |   3 up to 47    |
+|----------|--------------|-----------------|
+|__Value__ | message type | message payload |
 
 **Supported message types:
 1. Status message: message type 'S'
