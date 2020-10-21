@@ -45,8 +45,19 @@ according to the table below.
 | `<sensor-readings>`   | 2*NM bytes  | Two data bytes for each metric supported by the sensor. |
 
 ### Examples of an immediate data message
+Lets assume that the sensor with address 0x52 supports two metrics, then the sequence of bytes shown 
+below is a possible immediate data message.
 
-TODO
+`{ 0x52, 0x00, 0x01, 0x12, 0x04 }`
+
+This packet contains the data of 1 sensor. 
+
+* The first byte indicates the address, i.e., 0x52.
+* The next two bytes represent the reading of the first metric, i.e., 0x0001.
+* The last two bytes represent the reading of the second metric, i.e., 0x1204.
+
+**Note:** the sensor-description-files contain information about what (how many) metrics are 
+supported and how the readings need to be interpreted.
 
 ## Accumulated data message format
 
@@ -78,7 +89,29 @@ sensor). This field is always zero for the first sensor in the sensor-data field
 
 ### Examples of an accumulated data message
 
-TODO
+Lets assume that the sensor with address 0x52 supports two metrics and the sensor with address 0x48 
+supports 1 metric, then the sequence of bytes shown below is a possible immediate data message.
+
+`{ 0x48, 0x00, 0x00, 0x54, 0x09, 0x52, 0x00, 0x3C, 0xAE, 0x20, 0x15, 0x62, 0x48, 0x0D, 0xD4, 0x11, 0xBB }`
+
+This packet contains 3 measurements. 
+
+* The first 5 bytes is the oldest measurement. Of these 5 bytes:
+	* the first byte indicates the address, i.e., 0x48.
+	* the next two bytes is the number of seconds since the previous measurement, i.e., 0x0000 (0 seconds). This is always 0 for the earliest (first) measurement in the packet.
+	* the last two bytes represent the reading of the sensor's only metric, i.e., 0x5409.
+* The next 5 bytes is the oldest measurement. Of these 5 bytes:
+	* the first byte indicates the address, i.e., 0x52.
+	* the next two bytes is the number of seconds since the previous measurement, i.e., 0x003C (60 seconds).
+	* the next two bytes represent the reading of the first metric, i.e., 0xAE20.
+	* the last two bytes represent the reading of the second metric, i.e., 0x1562.
+* The last 5 bytes is the oldest measurement. Of these 5 bytes:
+	* the first byte indicates the address, i.e., 0x48.
+	* the next two bytes is the number of seconds since the previous measurement, i.e., 0x0DD4 (3540 seconds). This is always 3600 seconds (1 hour) later than the sensor's previous measurement.
+	* the last two bytes represent the reading of the sensor's only metric, i.e., 0x11BB.
+
+**Note:** the sensor-description-files contain information about what (how many) metrics are 
+supported and how the readings need to be interpreted.
 
 ## Status message format
 
