@@ -107,7 +107,7 @@ This packet contains 3 measurements.
 	* the last two bytes represent the reading of the second metric, i.e., 0x1562.
 * The last 5 bytes is the oldest measurement. Of these 5 bytes:
 	* the first byte indicates the address, i.e., 0x48.
-	* the next two bytes is the number of seconds since the previous measurement, i.e., 0x0DD4 (3540 seconds). This is always 3600 seconds (1 hour) later than the sensor's previous measurement.
+	* the next two bytes is the number of seconds since the previous measurement, i.e., 0x0DD4 (3540 seconds). This is 3600 seconds (1 hour) later than this sensor's previous measurement.
 	* the last two bytes represent the reading of the sensor's only metric, i.e., 0x11BB.
 
 **Note:** the sensor-description-files contain information about what (how many) metrics are 
@@ -134,7 +134,7 @@ If the back-end server receives the following status message,
 
 it can determine that:
 
-* the motherboard with ID 0x474F
+* the motherboard has ID 0x474F.
 * the local time is 0x1AC81BE1 (449321953 or Wednesday 28 March 1984 11:39:13 GMT). The main purpose is to be able to determine the elapsed time between two status message.
-* the motherboard does not use data accumulation
-* two sensors are connected to the motherboard, one with address 0x48 and one with address 0x52
+* the motherboard does not use data accumulation.
+* two sensors are connected to the motherboard, one with address 0x48 and one with address 0x52.
