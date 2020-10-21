@@ -19,6 +19,10 @@ LoRaWAN message format used by the motherboard
 2. Accumulated Data: message type 'A'
 3. Status Message: message type 'S'
 
+**Important node:** messages can be concatenated. For example, the back-end can receive a status
+message together with an accumulated data message. As another example, the back-end can receive two
+immediate data messages.
+
 ## Immediate data message format
 
 If no data accumulation is being used, the motherboard will send sensor readings from the moment
@@ -121,7 +125,7 @@ The motherboard will send a status message every 12 hours to the back-end server
 |:------------------------|:---------:|:-------------------------------------------------------------------------|
 | `<message-type>`        | 1 byte    | 'S' (0x53) for a status message.                                         |
 | `<motherboard-id>`      | 2 bytes   | The 16-bit Motherboard ID.                                               |
-| `<local-epoch>`         | 4 bytes   | A 32-bit UNIX timestamp representing the local time of the motherboard.  |
+| `<status-counter>`      | 2 bytes   | A 16-bit counter which increases for every status message.               |
 | `<data-accumulation>`   | 1 byte    | `<0x01 | 0x00 >` Indicating if data accumulation is used or not (resp.). |
 | `<nr-of-sensors>`       | 1 byte    | A value representing the number of sensors connected to the motherboard. |
 | `{sensor-address-list}` | NS bytes  | I2C address (1 byte) for each connected sensor.                          |
@@ -130,11 +134,11 @@ The motherboard will send a status message every 12 hours to the back-end server
 
 If the back-end server receives the following status message,
 
-`{ 0x53, 0x47, 0x4F, 0x1A 0xC8, 0x1B, 0xE1, 0x00, 0x02, 0x48, 0x52 }`
+`{ 0x53, 0x47, 0x4F, 0x00, 0x01, 0x00, 0x02, 0x48, 0x52 }`
 
 it can determine that:
 
 * the motherboard has ID 0x474F.
-* the local time is 0x1AC81BE1 (449321953 or Wednesday 28 March 1984 11:39:13 GMT). The main purpose is to be able to determine the elapsed time between two status message.
+* the status counter is 0x0001. This is the second status message sent by the motherboard since it did a reset (or power-up).
 * the motherboard does not use data accumulation.
 * two sensors are connected to the motherboard, one with address 0x48 and one with address 0x52.
