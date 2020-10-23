@@ -69,7 +69,7 @@ files).
 
 Typically, accumulated data messages are always sent in group (once the buffer size exceeds a 
 certain threshold). The seconds-elapsed field indicates how many seconds have passed since a
-previous measurment (of any sensor). This field is always zero for the first message in theg group
+previous measurment (of any sensor). This field is always zero for the first message in the group
 of messages that has been sent.
 
 ### Examples of an accumulated data message
