@@ -2,14 +2,14 @@
 List of things that need to be looked into, organized on topic.
 
 ## Motherboard
-* work with single poll interval for sensors with multiple metrics. This requires modification of the configurator tool as well.
-* Remove Diodes 4 and 5 and use another circuit for multiple supply voltages instead (Comparator and mosfet)
-* Use a higher grade LDO to have a smaller transient when switching on the motherboard (lp5907qmfx-3.3q1 seems to solve the problem, it does have the same footprint as well)
+* Measure current consumption
+* Redesign power supply (work-in-progress)
 * Silkscreen (needs to be more comprehensive)
 * Update documentation
 
 ## BME680
 * Improve results concerning the air quality
+* Hardware redesign (work-in-progress)
 
 ## Sound Level
 * There is a ripple visible in the acoustic measurements originating from the wake up and sleep functionality of the motherboard. A small fluctuation of the supply voltage causes a visible spike in the measurement. The fluctuation is already smaller by removing Diodes 4 and 5, but then there is no possibility to use multiple supply voltages. If the wake up and sleep of the motherboard is more coordinated to not occur during a sound measurement, the problem can also be solved without altering the hardware.
@@ -29,10 +29,9 @@ List of things that need to be looked into, organized on topic.
 * check .exe release
 * Add extra functionality concerning the battery module
 * Disable polling for buttons
-* Incorporate data accumulation
+* Incorporate "enable/disable data accumulation"
 
 ## Web application
-* Incorporate data accumulation
-* Periodic status updates?
+* Support new message formats
 * Add extra functionality concerning the battery module
 * if more than x-time, no data is received in the databank, make the graph 0 for that time to make sure that when the measurements start again, no intersection line is drawn between the 2 points.
