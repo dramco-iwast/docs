@@ -6,6 +6,9 @@ List of things that need to be looked into, organized on topic.
 * Redesign power supply (work-in-progress)
 * Silkscreen (needs to be more comprehensive)
 * Update documentation
+* When using immediate message format: the first received message will be send immediately, the second measurement will not be send and stored in the buffer, at the next interrupt from a module, the remaining buffer (from previous measurement) gets added to the new measurement.
+```measuring -> app data available -> send lora -> new measurement payload```
+This problem is not present when using data accumulation.
 
 ## BME680
 * Improve results concerning the air quality
@@ -17,6 +20,7 @@ List of things that need to be looked into, organized on topic.
 
 ## Buttons
 * Check naming of the repo's
+
 
 ## Future addon boards
 * battery module
