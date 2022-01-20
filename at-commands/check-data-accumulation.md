@@ -23,7 +23,7 @@ Check whether or not the motherboard will accumulate sensor measurements before 
 
 ### Example
 ```
-Command> AT+AGG?
+Command> AT+ACC?
 Response> +ACC: 0
 ```
 The board will not use data accumulation.

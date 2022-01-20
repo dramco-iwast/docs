@@ -14,7 +14,7 @@ AT+PNG?
 
 ### Response
 ```
-+PNG: <motherboard-id>
++PNG: <version-string>
 ```
 
 ### Description

@@ -23,7 +23,7 @@ Set whether or not the motherboard will accumulate sensor measurements before tr
 
 ### Example
 ```
-Command> AT+AGG=1
+Command> AT+ACC=1
 Response> OK
 ```
 The board will use data accumulation.

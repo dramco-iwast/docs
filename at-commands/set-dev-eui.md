@@ -22,7 +22,7 @@ Set the LoRa Device EUI for this motherboard. The `<lora_dev_eui>` field is sent
 
 ### Example
 ```
-Command> AT+ADR=0123456789ABCDEF
+Command> AT+AEUI=0123456789ABCDEF
 Response> OK
 ```
 There LoRa device EUI is set to `0123456789ABCDEF`.

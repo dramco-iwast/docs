@@ -18,12 +18,12 @@ AT+EUI?
 ```
 
 ### Description
-Check what the LoRa device EUI is for this motherboard.
+Check what the LoRa device EUI is for this motherboard. If the EUI has not been set before, this might return either an empty string or just plain nonsense. Use this command only to verify what the EUI is, if it has been set before.
 
 
 ### Example
 ```
-Command> AT+ADR?
-Response> +ADR: FF11EE22DD33CC44
+Command> AT+EUI?
+Response> +EUI: FF11EE22DD33CC44
 ```
 The motherboard has `FF11EE22DD33CC44` as LoRa device EUI (and the motherboard ID is `CC44`).

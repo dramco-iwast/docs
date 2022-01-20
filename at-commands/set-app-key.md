@@ -22,7 +22,7 @@ Set the LoRa Application for this motherboard. The `<lora_app_key>` field is sen
 
 ### Example
 ```
-Command> AT+ADR=FFFFAAAA6666DDDD1234987600005555
+Command> AT+APK=FFFFAAAA6666DDDD1234987600005555
 Response> OK
 ```
 There LoRa application key is now set to `FFFFAAAA6666DDDD1234987600005555`.
