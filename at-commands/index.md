@@ -50,6 +50,7 @@ This will also halt the serial communication, as the motherboard does not proces
 | `<AT_INVALID_POL>`     | 2        | The polling interval does not comply with the specs                                        |
 | `<AT_WRONG_VALUE>`     | 3        | The supplied value is not supported, e.g. when enabling something only 0 and 1 are allowed |
 | `<AT_WRONG_COMMAND>`   | 4        | The supplied AT command is not recognized                                                  |
+| `<AT_WRONG_ARG_LENGTH>`| 5        | The AT command argument has an unexpected length                                           |
 | ---------------------- | -------- | ------------------------------------------------------------------------------------------ |
 
 

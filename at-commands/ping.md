@@ -18,12 +18,12 @@ AT+PNG?
 ```
 
 ### Description
-Ping the motherboard. The motherboard will respond with its motherboard ID This is a sixteen bit unsigned identifier. The ID is sent as a 4-digit hex string in ASCII format.
+Ping the motherboard. The motherboard will respond with the version of the firmware.
 
 
 ### Example
 ```
 Command> AT+PNG?
-Response> +PNG: 474F
-The board has id 0x474F
+Response> +PNG: IWAST v2022_January_001
 ```
+The motherboard is running the IWAST `v2022_January_001` firmware

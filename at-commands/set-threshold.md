@@ -3,7 +3,7 @@ layout: default
 title: Set threshold
 parent: AT Commands
 has_toc: true
-nav_order: 7
+nav_order: 13
 ---
 
 ## Set threshold interval

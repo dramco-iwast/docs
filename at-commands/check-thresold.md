@@ -3,7 +3,7 @@ layout: default
 title: Check threshold
 parent: AT Commands
 has_toc: true
-nav_order: 8
+nav_order: 14
 ---
 
 ## Check threshold

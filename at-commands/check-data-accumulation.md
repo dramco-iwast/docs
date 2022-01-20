@@ -25,5 +25,5 @@ Check whether or not the motherboard will accumulate sensor measurements before 
 ```
 Command> AT+AGG?
 Response> +ACC: 0
-The board will not use data accumulation.
 ```
+The board will not use data accumulation.

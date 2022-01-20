@@ -25,5 +25,5 @@ Set whether or not the motherboard will accumulate sensor measurements before tr
 ```
 Command> AT+AGG=1
 Response> OK
-The board will use data accumulation.
 ```
+The board will use data accumulation.
