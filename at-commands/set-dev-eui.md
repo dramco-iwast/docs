@@ -9,7 +9,7 @@ nav_order: 7
 ## Set Data Accumulation
 ### Command
 ```
-AT+EUI=<the_lora_dev_eui>
+AT+EUI=<lora_dev_eui>
 ```
 
 ### Response
@@ -18,7 +18,7 @@ OK | ERROR <code>
 ```
 
 ### Description
-Set the LoRa Device EUI for this motherboard. The `<the_lora_dev_eui>` field is sent as a **16-digit hex string** in ASCII format as defined [here](../at-commands). This device EUI should match the settings for your TTN application. The 16-bit motherboard ID is the same as the last four digits of the device EUI.
+Set the LoRa Device EUI for this motherboard. The `<lora_dev_eui>` field is sent as a **16-digit hex string** in ASCII format as defined [here](../at-commands). This device EUI should match the settings for your TTN application. The 16-bit motherboard ID is the same as the last four digits of the device EUI.
 
 ### Example
 ```

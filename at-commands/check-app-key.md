@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Check the LoRa Device EUI
+title: Check the LoRa Application Key
 parent: AT Commands
 has_toc: true
 nav_order: 10
@@ -9,21 +9,21 @@ nav_order: 10
 ## Check Data Accumulation
 ### Command
 ```
-AT+EUI?
+AT+APK?
 ```
 
 ### Response
 ```
-+EUI: <the_lora_dev_eui>
++APK: <lora_app_key>
 ```
 
 ### Description
-Check what the LoRa device EUI is for this motherboard.
+Check what the LoRa application key is for this motherboard.
 
 
 ### Example
 ```
-Command> AT+ADR?
-Response> +ADR: FF11EE22DD33CC44
+Command> AT+APK?
+Response> +APK: FFFFAAFF11EE22DD33CC447600005555
 ```
-The motherboard has `FF11EE22DD33CC44` as LoRa device EUI (and the motherboard ID is `CC44`).
+The motherboard will use `FFFFAAFF11EE22DD33CC447600005555` as LoRa application key. This key is used during the over-the-air activation (OTAA) network join procedure.

@@ -19,7 +19,7 @@ AT+LS?
 ```
 
 ### Description
-List the sensors that are connected to the motherboard. The motherboard will respond with a space-separated list of sensors. In case no sensors are connected this list is empty. The `<sensorX>` field is sent as a **4-digit hex string** in ASCII format as defined [here](../at-commands). For a list of supported sensor types, see the [sensor boards doc](../sensorboards).
+List the sensors that are connected to the motherboard. The motherboard will respond with a space-separated list of sensors. In case no sensors are connected this list is empty. The `<sensorX>` field is sent as a **4-digit hex string** in ASCII format as defined [here](../at-commands). For a list of supported sensor types, see the [sensor boards doc](../sensor-boards).
 Based on the sensor type, the UI can determine which metrics are supported.
   
 ### Example

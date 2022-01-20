@@ -36,8 +36,10 @@ This will also halt the serial communication, as the motherboard does not proces
 | `<sensor-id>` | 4 hex digits | The Sensor ID comprises the Sensor Address (given by the motherboard) and the Sensor Type |
 | `<sensor-address>` | 2 hex digits | First 2 hex digits in the sensor id. |
 | `<sensor-type>` | 2 hex digits | Last 2 hex digits in the sensor id. IDs are defined in [sensors.yaml](https://github.com/dramco-iwast/sensor-description-files/blob/master/sensors.yaml) |
-| `<metric-id>` | 2 hex digits |TODO |
-| `<motherboard-id>` | 4 hex digits |TODO |
+| `<metric-id>` | 2 hex digits | TODO |
+| `<motherboard-id>` | 4 hex digits | The 16-bit motherboard ID is identicatl to the last 16 bits of the `<lora-dev-eui>` |
+| `<lora-dev-eui>` | 16 hex digits | A 16-character string representing an 8-byte identifier in hexadecimal notation. Typically, this can be copied straight from the TTN end device settings page. |
+| `<lora-app-key>` | 32 hex digits | A 32-character string representing an 16-byte key in hexadecimal notation. Typically, this can be copied straight from the TTN end device settings page. |
 |-----------|--------|-------------|
 
 

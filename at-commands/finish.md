@@ -3,7 +3,7 @@ layout: default
 title: Close
 parent: AT Commands
 has_toc: true
-nav_order: 9
+nav_order: 15
 ---
 
 ## Close
@@ -26,5 +26,5 @@ It will push the updated configurations to all connected sensors.
 ```
 Command> AT+CLS
 Response> OK
-No errors occurred.
 ```
+No errors occurred. The board has stored the update configuration in its non-volatile memory and will proceed to its normal operation.
