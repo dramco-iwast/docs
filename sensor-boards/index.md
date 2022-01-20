@@ -7,7 +7,7 @@ layout: default
 ---
 
 
-The functionalities and possible configurations for each sensor is defined in the [descrption files](https://github.com/dramco-iwast/sensor-description-files).
+The functionalities and possible configurations for each sensor is defined in the [description files](https://github.com/dramco-iwast/sensor-description-files).
 
 It is structured as:
 
