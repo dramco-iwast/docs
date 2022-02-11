@@ -6,7 +6,9 @@ has_toc: true
 nav_order: 7
 ---
 
-## Set Data Accumulation
+##  Set the LoRa Device EUI
+>> Note that the AppEUi or JoinEUI is correctly entered (fixed value): 4957415354415050
+>> 
 ### Command
 ```
 AT+EUI=<lora_dev_eui>
